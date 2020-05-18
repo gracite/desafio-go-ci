@@ -1,5 +1,5 @@
 FROM golang:alpine
 
-RUN go build -o ./src
+go build -o server ./src
 
 ENTRYPOINT ["go.ash"]
