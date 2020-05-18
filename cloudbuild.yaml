@@ -13,9 +13,11 @@ steps:
   args: ['run','soma.go']
 
 - id: "Fazendo o Build"
-  name: 'gcr.io/cloud-builders/docker'
+  name: gcr.io/cloud-builders/docker
   args:
   - 'build'
+  - '--build-arg'
+  - 'version=1.0'
   - '-t'
   - 'gcr.io/$PROJECT_ID/desafio-go-ci'
   - '.'
